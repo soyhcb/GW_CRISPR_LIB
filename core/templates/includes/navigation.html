@@ -1,0 +1,27 @@
+
+		<div class="main-header " style="height:76px;" id="navbar">
+			<nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar bg-dark">
+				<a class="navbar-brand text-siais" href="#"><img src="/static/assets/imgs/SIAIS-Big-LOGO-white.png" style="height:50px;"></a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-links" aria-controls="navbar-links" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbar-links">
+					<ul class="navbar-nav mr-auto"></ul>
+					<ul class="navbar-nav nav-flex-icons">
+						<li class="nav-item" id="home">
+							<a class="nav-link" href="/index.html">Home</a>
+						</li>
+						<li class="nav-item active" id="crispr_lib">
+							<a class="nav-link" href="{% url 'crispr_lib_page' %}">CRISPR Lib</a>
+						</li>
+						<li class="nav-item" id="about">
+							<a class="nav-link" href="/about.html">About</a>
+						</li>
+						<li class="nav-item" id="report">
+							<a class="nav-link" href="{% url 'report' %}">Report</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+
+		</div>

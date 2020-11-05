@@ -1,0 +1,43 @@
+{% extends "layouts/default.html" %}
+
+{% block title %} Dashboard {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}
+{% include 'includes/table_css.html' %}
+<style>
+</style>
+
+{% endblock stylesheets %}
+
+{% block content %}
+
+<div class="jumbotron">
+  <div class="container">
+    <h1 class="display-4">Report</h1>
+  </div>
+</div>
+
+
+<div class="container" id="result_container" style="margin-bottom: 8vh;">
+
+<form action="/report" method="post">
+    {% csrf_token %}
+    {{ form.as_table }}
+    <div class="row top-buffer"><button class="btn btn-siais mx-auto my-auto" type="submit" id="search-btn">Submit</button></div>
+</form>
+
+</div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->s
+{% block javascripts %}
+{% include 'includes/table_scripts.html' %}
+<script>
+var current = document.getElementsByClassName("active");
+current[0].className = current[0].className.replace(" active", "");
+var currpage = document.getElementById("report")
+currpage.className += " active";
+</script>
+{% endblock javascripts %}

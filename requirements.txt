@@ -1,0 +1,8 @@
+Django
+sqlparse
+dj-database-url
+pandas
+xlrd
+Unipath
+uwsgi
+django-pandas

@@ -1,0 +1,52 @@
+{% extends "layouts/default.html" %}
+
+{% block title %} Dashboard {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}
+
+<style>
+/* html, body, main-panel, content {
+  height: 100%;
+} */
+.h-100 {
+    height: 79vh !important;
+}
+</style>
+
+{% endblock stylesheets %}
+
+{% block content %}
+
+<div class="jumbotron">
+  <div class="container">
+    <h1 class="display-4">CRISPR Library</h1>
+    <p>This contains a Genome-wide CRISPR Library. This Page is reserves fro future Development. Blah Blah Blah Alice bob cindy david Blah Blah Blah Alice bob cindy david Blah Blah Blah Alice bob cindy david Blah Blah Blah Alice bob cindy david Blah Blah Blah Alice bob cindy david Blah Blah Blah Alice bob cindy david Blah Blah Blah Alice bob cindy david Blah Blah Blah Alice bob cindy david Blah Blah Blah Alice bob cindy david ...  
+      <a class="text-siais" href="/about.html">More</a></p>
+  </div>
+</div>
+
+<div class="container" id="result_container" style="margin-bottom: 5vh;">
+  <div class="row"><h5>Our Libraries:</h5></div>
+  <div class="row">
+    <div class="col-12">
+      <ol>
+        <li><a href="{% url 'crispr_lib_page' %}">Genome-wide Crispr Library</a></li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->s
+{% block javascripts %}
+<script>
+var current = document.getElementsByClassName("active");
+current[0].className = current[0].className.replace(" active", "");
+
+
+var currpage = document.getElementById("home")
+currpage.className += " active";
+</script>
+{% endblock javascripts %}

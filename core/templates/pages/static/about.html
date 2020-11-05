@@ -1,0 +1,36 @@
+{% extends "layouts/default.html" %}
+
+{% block title %} Dashboard {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}
+
+{% endblock stylesheets %}
+
+{% block content %}
+
+<div class="jumbotron">
+  <div class="container">
+    <h1 class="display-4">About</h1>
+  </div>
+</div>
+
+<div class="container">
+  This Genome-wide CRISPR-Lib is mainteined by the biomedical big data platform from <a href="https://siais.shanghaitech.edu.cn/">Shanghai Institute for Advanced Immunochemical Studies(SIAIS)</a> of <a href="https://www.shanghaitech.edu.cn/">ShanghaiTech University</a>
+</div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+
+<script>
+var current = document.getElementsByClassName("active");
+current[0].className = current[0].className.replace(" active", "");
+
+
+var about = document.getElementById("about")
+about.className += " active";
+
+</script>
+{% endblock javascripts %}

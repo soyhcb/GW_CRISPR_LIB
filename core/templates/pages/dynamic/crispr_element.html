@@ -1,0 +1,39 @@
+{% extends "layouts/default.html" %}
+
+{% block title %} Dashboard {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}
+{% include 'includes/table_css.html' %}
+<style>
+</style>
+
+{% endblock stylesheets %}
+
+{% block content %}
+
+<div class="jumbotron">
+  <div class="container">
+    <h1 class="display-4">CRISPR Info</h1>
+  </div>
+</div>
+
+
+<div class="container" id="result_container" style="margin-bottom: 8vh;">
+  <div class="row">
+    <ul>
+      {% for field in info %}
+      <li><strong>{{ field.n }}:&nbsp;</strong>{{ field.v }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->s
+{% block javascripts %}
+{% include 'includes/table_scripts.html' %}
+<script>
+</script>
+{% endblock javascripts %}

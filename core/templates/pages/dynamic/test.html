@@ -1,0 +1,32 @@
+<header>
+<link rel="stylesheet" href="/static/assets/css/bootstrap.min.css">
+<link rel="stylesheet" href="/static/assets/css/custom.css">
+{% include 'includes/scripts.html' %}
+{% include 'includes/table_css.html' %}
+{% include 'includes/table_scripts.html' %}
+<script>
+  $(document).ready(function() {
+    var table = $('#result_table').DataTable( {
+      buttons: [ 'copyHtml5', 'excelHtml5', 'csvHtml5', 'colvis', 'print'],
+      lengthChange: true,
+      fixedHeader: {headerOffset: $('#navbar').outerHeight()},
+      colReorder: true,
+      columnDefs: [{  targets: 3,
+         render: function (data, type, row, meta) {
+            return '<a target="_blank" href="/crispr/' + data +'">' + data + '</a>';
+         }
+      }]
+    } );
+ 
+    table.buttons().container()
+        .appendTo( '#result_table_wrapper .col-md-6:eq(0)' );
+} );
+</script>
+</header>
+<body>
+    <div class="container"><div class="row"><h1>HHHHHHHHHH</h1></div></div>
+    <div class="container"><div class="row">
+{% autoescape off %}
+{{ table }}
+{% endautoescape %}</div></div>
+</body>
